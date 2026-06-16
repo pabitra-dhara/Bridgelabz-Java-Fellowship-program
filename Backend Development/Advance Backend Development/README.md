@@ -107,7 +107,7 @@ jwt.expiration=86400000
 
 Running the Application:
 Clone Repository:
-git clone https://github.com/yourusername/fundoo-notes.git
+git clone https:https://github.com/pabitra-dhara/Bridgelabz-Training-Java-Programming.git
 Build Project:
 mvn clean install
 Run Application:
