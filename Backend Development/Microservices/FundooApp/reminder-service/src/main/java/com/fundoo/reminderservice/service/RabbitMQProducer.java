@@ -1,6 +1,6 @@
 package com.fundoo.reminderservice.service;
 
-import com.fundoo.reminderservice.config.RabbitMQConfig;
+import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import com.fundoo.reminderservice.dto.ReminderEmailDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;

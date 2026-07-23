@@ -1,12 +1,16 @@
 package com.fundoo.reminderservice.service.impl;
 
 import com.fundoo.reminderservice.dto.ReminderEmailDto;
+import com.fundoo.reminderservice.dto.UserResponse;
 import com.fundoo.reminderservice.dto.request.ReminderRequest;
+import com.fundoo.reminderservice.dto.response.NoteResponse;
 import com.fundoo.reminderservice.dto.response.ReminderResponse;
 import com.fundoo.reminderservice.entity.Reminder;
 import com.fundoo.reminderservice.repository.ReminderRepository;
+import com.fundoo.reminderservice.service.NoteServiceClient;
 import com.fundoo.reminderservice.service.RabbitMQProducer;
 import com.fundoo.reminderservice.service.ReminderService;
+import com.fundoo.reminderservice.service.UserServiceClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -14,39 +18,37 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class ReminderServiceImpl
-        implements ReminderService {
+public class ReminderServiceImpl implements ReminderService {
 
     private final ReminderRepository reminderRepository;
     private final RabbitMQProducer rabbitMQProducer;
+    private final UserServiceClient userServiceClient;
+    private final NoteServiceClient noteServiceClient;
 
-    private static final Long USER_ID = 1L;
+
 
     @Override
     public ReminderResponse createReminder(
+            String email,
             Long noteId,
             ReminderRequest request) {
 
-        Reminder reminder =
-                Reminder.builder()
-                        .userId(USER_ID)
-                        .noteId(noteId)
-                        .reminderTime(request.getReminderTime())
-                        .notified(false)
-                        .build();
+        UserResponse user =
+                userServiceClient.getUserByEmail(email);
+
+        NoteResponse note =
+                noteServiceClient.getNote(noteId);
+
+        Reminder reminder = Reminder.builder()
+                .userId(user.getId())
+                .noteId(noteId)
+                .noteTitle(note.getTitle())
+                .noteDescription(note.getDescription())
+                .reminderTime(request.getReminderTime())
+                .notified(false)
+                .build();
 
         reminderRepository.save(reminder);
-
-        // Send message to RabbitMQ
-        ReminderEmailDto dto =
-                new ReminderEmailDto(
-                        "pabitradhara096@gmail.com",
-                        "Reminder Created",
-                        "Your reminder has been created successfully."
-                );
-
-        rabbitMQProducer.sendReminder(dto);
-
         return map(reminder);
     }
 
@@ -81,10 +83,13 @@ public class ReminderServiceImpl
 
     @Override
     public List<ReminderResponse>
-    getMyReminders() {
+    getMyReminders(String email) {
+
+        UserResponse user =
+                userServiceClient.getUserByEmail(email);
 
         return reminderRepository
-                .findByUserId(USER_ID)
+                .findByUserId(user.getId())
                 .stream()
                 .map(this::map)
                 .toList();

@@ -17,4 +17,5 @@ public interface LabelService {
 
     void deleteLabel(Long labelId);
 
+    LabelResponse getLabel(Long id);
 }

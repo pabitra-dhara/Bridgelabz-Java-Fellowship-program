@@ -1,14 +1,18 @@
 package com.fundoo.notesservice.service.impl;
 
 import com.fundoo.notesservice.dto.request.NoteRequest;
+import com.fundoo.notesservice.dto.response.LabelResponse;
 import com.fundoo.notesservice.dto.response.NoteResponse;
 import com.fundoo.notesservice.entity.Note;
 import com.fundoo.notesservice.exception.NoteNotFoundException;
+import com.fundoo.notesservice.exception.NoteNotInTrashException;
 import com.fundoo.notesservice.repository.NoteRepository;
+import com.fundoo.notesservice.service.LabelServiceClient;
 import com.fundoo.notesservice.service.NoteService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -16,6 +20,8 @@ import java.util.List;
 public class NoteServiceImpl implements NoteService {
 
     private final NoteRepository noteRepository;
+
+    private final LabelServiceClient labelServiceClient;
 
     @Override
     public NoteResponse createNote(NoteRequest request) {
@@ -64,7 +70,7 @@ public class NoteServiceImpl implements NoteService {
     }
 
     @Override
-    public void deleteNote(Long noteId) {
+    public NoteResponse deleteNote(Long noteId) {
 
         Note note = noteRepository
                 .findById(noteId)
@@ -75,6 +81,8 @@ public class NoteServiceImpl implements NoteService {
         note.setTrashed(true);
 
         noteRepository.save(note);
+
+        return mapToResponse(note);
     }
 
     @Override
@@ -181,6 +189,14 @@ public class NoteServiceImpl implements NoteService {
 
     private NoteResponse mapToResponse(Note note) {
 
+        List<LabelResponse> labels =
+                note.getLabelIds() == null
+                        ? List.of()
+                        : note.getLabelIds()
+                        .stream()
+                        .map(labelServiceClient::getLabel)
+                        .toList();
+
         return NoteResponse.builder()
                 .id(note.getId())
                 .title(note.getTitle())
@@ -188,6 +204,68 @@ public class NoteServiceImpl implements NoteService {
                 .pinned(note.isPinned())
                 .archived(note.isArchived())
                 .trashed(note.isTrashed())
+                .labels(labels)
                 .build();
+    }
+
+    @Override
+    public NoteResponse addLabelToNote(Long noteId, Long labelId) {
+
+        labelServiceClient.getLabel(labelId);
+
+        Note note = noteRepository.findById(noteId)
+                .orElseThrow(() ->
+                        new NoteNotFoundException("Note not found"));
+
+        if (note.getLabelIds() == null) {
+            note.setLabelIds(new ArrayList<>());
+        }
+
+        if (!note.getLabelIds().contains(labelId)) {
+            note.getLabelIds().add(labelId);
+        }
+
+        noteRepository.save(note);
+
+        return mapToResponse(note);
+    }
+    @Override
+    public NoteResponse removeLabelFromNote(Long noteId, Long labelId) {
+
+        Note note = noteRepository.findById(noteId)
+                .orElseThrow(() ->
+                        new NoteNotFoundException("Note not found"));
+
+        if (note.getLabelIds() != null) {
+            note.getLabelIds().remove(labelId);
+        }
+
+        noteRepository.save(note);
+
+        return mapToResponse(note);
+    }
+
+    @Override
+    public void permanentDelete(Long noteId) {
+
+        Note note = noteRepository.findById(noteId)
+                .orElseThrow(() ->
+                        new NoteNotFoundException("Note not found"));
+
+        if (!note.isTrashed()) {
+            throw new NoteNotInTrashException("Move the note to Trash before permanently deleting it.");
+        }
+
+        noteRepository.delete(note);
+    }
+
+    @Override
+    public NoteResponse getNote(Long noteId) {
+
+        Note note = noteRepository.findById(noteId)
+                .orElseThrow(() ->
+                        new NoteNotFoundException("Note not found"));
+
+        return mapToResponse(note);
     }
 }

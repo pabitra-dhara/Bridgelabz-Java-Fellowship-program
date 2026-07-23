@@ -8,6 +8,7 @@ import java.util.List;
 public interface ReminderService {
 
     ReminderResponse createReminder(
+            String email,
             Long noteId,
             ReminderRequest request);
 
@@ -17,5 +18,5 @@ public interface ReminderService {
             Long reminderId,
             ReminderRequest request);
 
-    List<ReminderResponse> getMyReminders();
+    List<ReminderResponse> getMyReminders(String email);
 }

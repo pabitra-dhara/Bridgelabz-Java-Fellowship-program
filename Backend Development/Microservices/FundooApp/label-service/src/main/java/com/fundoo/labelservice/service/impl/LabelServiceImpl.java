@@ -75,4 +75,14 @@ public class LabelServiceImpl implements LabelService {
                 .name(label.getName())
                 .build();
     }
+
+    @Override
+    public LabelResponse getLabel(Long id) {
+
+        Label label = labelRepository.findById(id)
+                .orElseThrow(() ->
+                        new LabelNotFoundException("Label not found"));
+
+        return map(label);
+    }
 }

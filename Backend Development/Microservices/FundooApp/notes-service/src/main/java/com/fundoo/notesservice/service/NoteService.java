@@ -16,7 +16,7 @@ public interface NoteService {
     NoteResponse updateNote(Long noteId,
                             NoteRequest request);
 
-    void deleteNote(Long noteId);
+    NoteResponse deleteNote(Long noteId);
 
     NoteResponse pinNote(Long noteId);
 
@@ -31,4 +31,12 @@ public interface NoteService {
     List<NoteResponse> getTrashNotes();
 
     List<NoteResponse> searchNotes(String keyword);
+
+    NoteResponse addLabelToNote(Long noteId, Long labelId);
+
+    NoteResponse removeLabelFromNote(Long noteId, Long labelId);
+
+    void permanentDelete(Long noteId);
+
+    NoteResponse getNote(Long noteId);
 }

@@ -6,16 +6,10 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class RabbitMQConfig {
-
-    public static final String REMINDER_QUEUE =
-            "fundoo.reminder.queue";
-
+    public static final String REMINDER_QUEUE = "fundoo.reminder.queue";
     @Bean
     public Queue reminderQueue() {
-
-        return new Queue(
-                REMINDER_QUEUE,
-                true
+        return new Queue(REMINDER_QUEUE, true
         );
     }
 }

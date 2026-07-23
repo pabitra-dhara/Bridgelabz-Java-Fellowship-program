@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "notes")
@@ -45,4 +47,12 @@ public class Note {
     public void onUpdate() {
         updatedAt = LocalDateTime.now();
     }
+
+    @ElementCollection
+    @CollectionTable(
+            name = "note_labels",
+            joinColumns = @JoinColumn(name = "note_id")
+    )
+    @Column(name = "label_id")
+    private List<Long> labelIds = new ArrayList<>();
 }

@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import com.fundoo.userservice.dto.response.UserResponse;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 @RestController
 @RequestMapping("/api/auth")
@@ -19,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class AuthController {
 
     private final AuthService authService;
+
 
     @PostMapping("/register")
     public ApiResponse<String> register(
@@ -36,5 +40,24 @@ public class AuthController {
         return new ApiResponse<>(
                 "Success",
                 authService.login(request));
+    }
+
+    @GetMapping("/email/{email}")
+    public ApiResponse<UserResponse> getUserByEmail(
+            @PathVariable String email) {
+
+        return new ApiResponse<>(
+                "Success",
+                authService.getUserByEmail(email)
+        );
+    }
+
+    @GetMapping("/{id}")
+    public ApiResponse<UserResponse> getUserById(
+            @PathVariable Long id) {
+
+        return new ApiResponse<>(
+                "Success",
+                authService.getUserById(id));
     }
 }

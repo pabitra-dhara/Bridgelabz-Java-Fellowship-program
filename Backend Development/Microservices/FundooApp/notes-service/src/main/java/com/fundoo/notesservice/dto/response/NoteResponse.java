@@ -2,6 +2,8 @@ package com.fundoo.notesservice.dto.response;
 
 import lombok.Builder;
 import lombok.Data;
+import com.fundoo.notesservice.dto.response.LabelResponse;
+import java.util.List;
 
 @Data
 @Builder
@@ -18,4 +20,6 @@ public class NoteResponse {
     private boolean archived;
 
     private boolean trashed;
+
+    private List<LabelResponse> labels;
 }

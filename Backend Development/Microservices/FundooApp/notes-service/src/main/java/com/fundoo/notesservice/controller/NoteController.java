@@ -45,15 +45,14 @@ public class NoteController {
     }
 
     @DeleteMapping("/{id}")
-    public ApiResponse<String> deleteNote(
+    public ApiResponse<NoteResponse> deleteNote(
             @PathVariable Long id) {
 
-        noteService.deleteNote(id);
-
         return new ApiResponse<>(
-                "Deleted Successfully",
-                null);
+                "Delete Successfully",
+                noteService.deleteNote(id));
     }
+
     @PutMapping("/{id}/pin")
     public ApiResponse<NoteResponse> pinNote(
             @PathVariable Long id) {
@@ -110,5 +109,45 @@ public class NoteController {
         return new ApiResponse<>(
                 "Success",
                 noteService.searchNotes(keyword));
+    }
+    @PostMapping("/{noteId}/labels/{labelId}")
+    public ApiResponse<NoteResponse> addLabelToNote(
+            @PathVariable Long noteId,
+            @PathVariable Long labelId) {
+
+        return new ApiResponse<>(
+                "Label Added Successfully",
+                noteService.addLabelToNote(noteId, labelId)
+        );
+    }
+    @DeleteMapping("/{noteId}/labels/{labelId}")
+    public ApiResponse<NoteResponse> removeLabelFromNote(
+            @PathVariable Long noteId,
+            @PathVariable Long labelId) {
+
+        return new ApiResponse<>(
+                "Label Removed Successfully",
+                noteService.removeLabelFromNote(noteId, labelId)
+        );
+    }
+
+    @DeleteMapping("/{id}/permanent")
+    public ApiResponse<String> permanentDelete(
+            @PathVariable Long id) {
+
+        noteService.permanentDelete(id);
+
+        return new ApiResponse<>(
+                "Note Deleted Permanently",
+                null);
+    }
+
+    @GetMapping("/{id}")
+    public ApiResponse<NoteResponse> getNote(
+            @PathVariable Long id) {
+
+        return new ApiResponse<>(
+                "Success",
+                noteService.getNote(id));
     }
 }

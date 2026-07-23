@@ -19,12 +19,14 @@ public class ReminderController {
     @PostMapping("/{noteId}")
     public ApiResponse<ReminderResponse>
     createReminder(
+            @RequestHeader("X-User-Email") String email,
             @PathVariable Long noteId,
             @RequestBody ReminderRequest request) {
 
         return new ApiResponse<>(
                 "Reminder Created",
                 reminderService.createReminder(
+                        email,
                         noteId,
                         request));
     }
@@ -56,10 +58,11 @@ public class ReminderController {
 
     @GetMapping
     public ApiResponse<List<ReminderResponse>>
-    getAllReminders() {
+    getAllReminders(
+            @RequestHeader("X-User-Email") String email) {
 
         return new ApiResponse<>(
                 "Success",
-                reminderService.getMyReminders());
+                reminderService.getMyReminders(email));
     }
 }

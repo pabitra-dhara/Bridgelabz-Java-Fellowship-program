@@ -5,6 +5,7 @@ package com.fundoo.userservice.service.impl;
 import com.fundoo.userservice.dto.request.LoginRequest;
 import com.fundoo.userservice.dto.request.RegisterRequest;
 import com.fundoo.userservice.dto.response.LoginResponse;
+import com.fundoo.userservice.dto.response.UserResponse;
 import com.fundoo.userservice.entity.User;
 import com.fundoo.userservice.exception.UserAlreadyExistsException;
 import com.fundoo.userservice.exception.UserNotFoundException;
@@ -79,6 +80,36 @@ public class AuthServiceImpl implements AuthService {
         return LoginResponse.builder()
                 .email(user.getEmail())
                 .token(token)
+                .build();
+    }
+
+    @Override
+    public UserResponse getUserById(Long id) {
+
+        User user = userRepository.findById(id)
+                .orElseThrow(() ->
+                        new RuntimeException("User not found"));
+
+        return UserResponse.builder()
+                .id(user.getId())
+                .firstName(user.getFirstName())
+                .lastName(user.getLastName())
+                .email(user.getEmail())
+                .build();
+    }
+
+    @Override
+    public UserResponse getUserByEmail(String email) {
+
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() ->
+                        new RuntimeException("User not found"));
+
+        return UserResponse.builder()
+                .id(user.getId())
+                .firstName(user.getFirstName())
+                .lastName(user.getLastName())
+                .email(user.getEmail())
                 .build();
     }
 }

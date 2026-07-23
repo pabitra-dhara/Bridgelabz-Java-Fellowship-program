@@ -54,5 +54,14 @@ public class LabelController {
                 "Deleted Successfully",
                 null);
     }
+
+    @GetMapping("/{id}")
+    public ApiResponse<LabelResponse> getLabel(
+            @PathVariable Long id) {
+
+        return new ApiResponse<>(
+                "Success",
+                labelService.getLabel(id));
+    }
 }
 
