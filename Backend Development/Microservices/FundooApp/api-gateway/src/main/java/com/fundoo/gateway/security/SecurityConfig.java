@@ -12,19 +12,24 @@ public class SecurityConfig {
     public SecurityWebFilterChain securityWebFilterChain(
             ServerHttpSecurity http) {
 
-        http
+        return http
                 .csrf(ServerHttpSecurity.CsrfSpec::disable)
-
+                .cors(cors -> {})
                 .authorizeExchange(exchange -> exchange
 
-                        .pathMatchers("/api/auth/**")
+                        .pathMatchers(
+                                "/api-gateway/auth/**"
+                        )
+                        .permitAll()
+
+                        .pathMatchers(
+                                "/api/auth/**"
+                        )
                         .permitAll()
 
                         .anyExchange()
                         .permitAll()
-
-                );
-
-        return http.build();
+                )
+                .build();
     }
 }
