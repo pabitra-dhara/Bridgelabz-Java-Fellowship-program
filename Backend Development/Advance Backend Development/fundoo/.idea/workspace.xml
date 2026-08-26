@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d8d773cf-ba3c-46b2-9646-98da3755aab9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/api-gateway/src/main/java/com/fundoo/gateway/ApiGatewayApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/api-gateway/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/eureka-server/src/main/java/com/fundoo/eureka/EurekaServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/eureka-server/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/label-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/label-service/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/label-service/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/label-service/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/label-service/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/label-service/.mvn/jvm.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/label-service/.mvn/maven.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/label-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/label-service/src/main/java/com/fundoo/labelservice/LabelServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/label-service/src/main/java/com/fundoo/labelservice/controller/LabelController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/label-service/src/main/java/com/fundoo/labelservice/dto/request/LabelRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/label-service/src/main/java/com/fundoo/labelservice/dto/response/ApiResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/label-service/src/main/java/com/fundoo/labelservice/dto/response/LabelResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/label-service/src/main/java/com/fundoo/labelservice/entity/Label.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/label-service/src/main/java/com/fundoo/labelservice/exception/LabelNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/label-service/src/main/java/com/fundoo/labelservice/repository/LabelRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/label-service/src/main/java/com/fundoo/labelservice/service/LabelService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/label-service/src/main/java/com/fundoo/labelservice/service/impl/LabelServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/label-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/label-service/src/test/java/com/fundoo/labelservice/LabelServiceApplicationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notes-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notes-service/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notes-service/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notes-service/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notes-service/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notes-service/.mvn/jvm.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notes-service/.mvn/maven.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notes-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notes-service/src/main/java/com/fundoo/notesservice/NotesServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notes-service/src/main/java/com/fundoo/notesservice/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notes-service/src/main/java/com/fundoo/notesservice/controller/NoteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notes-service/src/main/java/com/fundoo/notesservice/dto/request/NoteRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notes-service/src/main/java/com/fundoo/notesservice/dto/response/ApiResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notes-service/src/main/java/com/fundoo/notesservice/dto/response/NoteResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notes-service/src/main/java/com/fundoo/notesservice/entity/Note.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notes-service/src/main/java/com/fundoo/notesservice/exception/NoteNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notes-service/src/main/java/com/fundoo/notesservice/repository/NoteRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notes-service/src/main/java/com/fundoo/notesservice/service/NoteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notes-service/src/main/java/com/fundoo/notesservice/service/impl/NoteServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notes-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notes-service/src/test/java/com/fundoo/notesservice/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notification-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notification-service/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notification-service/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notification-service/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notification-service/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notification-service/.mvn/jvm.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notification-service/.mvn/maven.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notification-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notification-service/src/main/java/com/fundoo/notificationservice/NotificationServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notification-service/src/main/java/com/fundoo/notificationservice/config/RabbitMQConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notification-service/src/main/java/com/fundoo/notificationservice/consumer/RabbitMQConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notification-service/src/main/java/com/fundoo/notificationservice/controller/MailTestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notification-service/src/main/java/com/fundoo/notificationservice/dto/ReminderEmailDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notification-service/src/main/java/com/fundoo/notificationservice/service/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notification-service/src/main/java/com/fundoo/notificationservice/service/impl/EmailServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notification-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/notification-service/src/test/java/com/fundoo/notificationservice/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/reminder-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/reminder-service/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/reminder-service/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/reminder-service/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/reminder-service/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/reminder-service/.mvn/jvm.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/reminder-service/.mvn/maven.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/reminder-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/reminder-service/src/main/java/com/fundoo/reminderservice/ReminderServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/reminder-service/src/main/java/com/fundoo/reminderservice/config/RabbitMQConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/reminder-service/src/main/java/com/fundoo/reminderservice/controller/ReminderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/reminder-service/src/main/java/com/fundoo/reminderservice/dto/ReminderEmailDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/reminder-service/src/main/java/com/fundoo/reminderservice/dto/request/ReminderRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/reminder-service/src/main/java/com/fundoo/reminderservice/dto/response/ApiResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/reminder-service/src/main/java/com/fundoo/reminderservice/dto/response/ReminderResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/reminder-service/src/main/java/com/fundoo/reminderservice/entity/Reminder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/reminder-service/src/main/java/com/fundoo/reminderservice/repository/ReminderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/reminder-service/src/main/java/com/fundoo/reminderservice/service/RabbitMQProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/reminder-service/src/main/java/com/fundoo/reminderservice/service/ReminderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/reminder-service/src/main/java/com/fundoo/reminderservice/service/impl/ReminderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/reminder-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/reminder-service/src/test/java/com/fundoo/reminderservice/ReminderServiceApplicationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/user-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/user-service/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/user-service/.mvn/jvm.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/user-service/.mvn/maven.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/user-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/user-service/src/main/java/com/fundoo/userservice/UserServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/user-service/src/main/java/com/fundoo/userservice/config/JwtProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/user-service/src/main/java/com/fundoo/userservice/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/user-service/src/main/java/com/fundoo/userservice/dto/request/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/user-service/src/main/java/com/fundoo/userservice/dto/request/RegisterRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/user-service/src/main/java/com/fundoo/userservice/dto/response/ApiResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/user-service/src/main/java/com/fundoo/userservice/dto/response/LoginResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/user-service/src/main/java/com/fundoo/userservice/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/user-service/src/main/java/com/fundoo/userservice/exception/UserAlreadyExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/user-service/src/main/java/com/fundoo/userservice/exception/UserNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/user-service/src/main/java/com/fundoo/userservice/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/user-service/src/main/java/com/fundoo/userservice/security/CustomUserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/user-service/src/main/java/com/fundoo/userservice/security/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/user-service/src/main/java/com/fundoo/userservice/security/JwtService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/user-service/src/main/java/com/fundoo/userservice/security/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/user-service/src/main/java/com/fundoo/userservice/security/UserPrincipal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/user-service/src/main/java/com/fundoo/userservice/service/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/user-service/src/main/java/com/fundoo/userservice/service/impl/AuthServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/user-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Microservices/FundooApp/user-service/src/test/java/com/fundoo/userservice/UserServiceApplicationTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="3EcCki3Koj8nTIYTrGCc9ItWd3M" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.FundooApplication.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Backend-Development&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Bridgelabz Java/Backend Development/Advance Backend Development/fundoo&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.fundoonotesapp.fundoo.service" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.28238.7" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d8d773cf-ba3c-46b2-9646-98da3755aab9" name="Changes" comment="" />
+      <created>1780468619115</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1780468619115</updated>
+    </task>
+    <servers />
+  </component>
+</project>
