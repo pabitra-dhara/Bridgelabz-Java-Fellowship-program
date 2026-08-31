@@ -1,0 +1,3 @@
+com\bookstore\security\JwtAuthenticationFilter.class
+com\bookstore\security\JwtService.class
+com\bookstore\security\SecurityBeans.class

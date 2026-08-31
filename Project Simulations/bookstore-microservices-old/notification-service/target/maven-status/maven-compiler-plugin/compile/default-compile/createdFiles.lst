@@ -1,0 +1,3 @@
+com\bookstore\notification\MessagingListener.class
+com\bookstore\notification\NotificationServiceApplication.class
+com\bookstore\notification\config\RabbitMQConfig.class

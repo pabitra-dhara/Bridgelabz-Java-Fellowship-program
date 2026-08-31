@@ -1,0 +1,9 @@
+com\bookstore\book\repository\BookRepository.class
+com\bookstore\book\repository\FeedbackRepository.class
+com\bookstore\book\exception\GlobalExceptionHandler.class
+com\bookstore\book\controller\BookController.class
+com\bookstore\book\BookServiceApplication.class
+com\bookstore\book\entity\Feedback.class
+com\bookstore\book\entity\Book.class
+com\bookstore\book\config\SecurityConfig.class
+com\bookstore\book\config\RedisConfig.class

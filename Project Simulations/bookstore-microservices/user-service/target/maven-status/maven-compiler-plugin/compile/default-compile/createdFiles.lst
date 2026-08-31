@@ -1,0 +1,11 @@
+com\bookstore\user\controller\UserController.class
+com\bookstore\user\config\SecurityConfig.class
+com\bookstore\user\entity\User.class
+com\bookstore\user\repository\CustomerDetailsRepository.class
+com\bookstore\user\repository\UserRepository.class
+com\bookstore\user\entity\CustomerDetails.class
+com\bookstore\user\exception\GlobalExceptionHandler.class
+com\bookstore\user\service\UserService.class
+com\bookstore\user\config\RabbitConfig.class
+com\bookstore\user\entity\Role.class
+com\bookstore\user\UserServiceApplication.class
